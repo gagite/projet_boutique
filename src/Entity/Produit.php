@@ -1,11 +1,5 @@
 <?php 
-    function connect_bd() { 
-        $dsn = 'mysql:dbname=boutiques;host=127.0.0.1';
-        $user = 'root';
-        $password = '';
-        $dbh = new PDO($dsn, $user, $password);
-        return $dbh;
-    }
+include_once __DIR__.'/functuion.php';
     
     function getProduit_Entity(){
         /* 1. Connexion à une base MySQL avec l'invocation de pilote */

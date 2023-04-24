@@ -27,7 +27,7 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/catalogue">Liste des produits</a>
                 </li>
-                <?php if ($user['admin']==1) { ?>
+                <?php //if ($user['admin']==1) { ?>
                 <li class="nav-item">
                     <a class="nav-link" href="/user">Liste des utilisateurs</a>
                 </li>
@@ -37,7 +37,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/nouveau_user">ajouter user</a>
                 </li> 
-                <?php } ?>
+                <?php //} ?>
                 <li class="nav-item">
                     <a class="nav-link" href="/connexion">Connexion</a>
                 </li> 

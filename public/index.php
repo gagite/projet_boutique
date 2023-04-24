@@ -9,12 +9,12 @@
 // gestion de la variable path_info
 // include "header.php";
 session_start();
-include_once __DIR__.'/../src/Entity/User.php';
-echo $_SESSION['user'];
-$user=getDetailUser($_SESSION['user']);
+//include_once __DIR__.'/../src/Entity/User.php';
+//echo $_SESSION['user'];
+//$user=getDetailUser($_SESSION['user']);
 
 
- var_dump($user);
+ //var_dump($user);
 include __DIR__.'/../templates/header.php';
 // si on a rien apres le / de l'url alors
 // le chemin sera = catalogue
