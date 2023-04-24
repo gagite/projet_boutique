@@ -14,7 +14,9 @@ catalogue !
                         <p class="card-text"><?= $unproduit['description'] ?></p>
                         <p>
                             <a href="detail.php?id=<?=$unproduit['id']?>">VOIR LE DETAIL</a>
+                            <?php if ($connexion == true){ ?>
                             <a href="/supprimer_produit?id=<?=$unproduit['id']?>">SUPPRIMER</a>
+                        <?php }?>
                         </p>
                     </div>
                 </div>

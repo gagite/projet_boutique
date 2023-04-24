@@ -12,9 +12,15 @@ session_start();
 //include_once __DIR__.'/../src/Entity/User.php';
 //echo $_SESSION['user'];
 //$user=getDetailUser($_SESSION['user']);
+//var_dump($_SESSION);
+$connexion = false;
 
-
- //var_dump($user);
+if(isset($_SESSION['user'])){
+    
+    $connexion=true;
+}
+echo $connexion;
+//var_dump($user);
 include __DIR__.'/../templates/header.php';
 // si on a rien apres le / de l'url alors
 // le chemin sera = catalogue
@@ -112,7 +118,10 @@ elseif ($page=="/verifie_authentication"){
     // fonction qui va verifie les identifiants de connexion
     verifie_authentication();
 }
-
+elseif ($page=="/deconnexion"){ 
+    include __DIR__.'/../src/Controller/AuthentificationController.php';
+    deconnexion();
+}
 
 else {
     echo "ERROR 404";

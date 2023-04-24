@@ -39,7 +39,16 @@ function verifie_authentication(){
         echo "Mot de passe incorect";
         include __DIR__.'/../../templates/form_connexion.php';
     }
+
+    
 }
 
-
 // fonction de deconnexion
+function deconnexion(){
+    //detruit la session
+        session_destroy();
+        //redirection ver l accueil
+        header('Location: index.php');
+    }
+
+
