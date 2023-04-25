@@ -1,7 +1,7 @@
 <?php
 // LIRE LES user
 function getUser(){
-   include __DIR__.'/../Entity/User.php';
+   include_once __DIR__.'/../Entity/User.php';
    $resultat=getUser_Entity();
    // Renvoie vue 
    include __DIR__.'/../../templates/user.php';

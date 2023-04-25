@@ -9,16 +9,25 @@
 // gestion de la variable path_info
 // include "header.php";
 session_start();
-//include_once __DIR__.'/../src/Entity/User.php';
-//echo $_SESSION['user'];
-//$user=getDetailUser($_SESSION['user']);
+
 //var_dump($_SESSION);
 $connexion = false;
-
-if(isset($_SESSION['user'])){
-    
+$admin=false;
+if(isset($_SESSION['user'])) {
+    // si on est connecte alors connexion <= true
     $connexion=true;
-}
+    // par défaut on n'est pas admin
+    // recuperer les fonction de l'entité USER
+    include_once __DIR__.'/../src/Entity/User.php';
+    // getDetailUser permet de recuperer toutes les informations concernant
+    // le user de la session
+    $user_complet=getDetailUser($_SESSION['user']);
+    if ($user_complet['admin']==1) {
+        // si le champs admin contient 1 alors admin <= true
+        $admin=true;
+    }
+}  
+
 echo $connexion;
 //var_dump($user);
 include __DIR__.'/../templates/header.php';
@@ -121,6 +130,22 @@ elseif ($page=="/verifie_authentication"){
 elseif ($page=="/deconnexion"){ 
     include __DIR__.'/../src/Controller/AuthentificationController.php';
     deconnexion();
+}
+elseif ($page=="/ajouter_panier"){ 
+    include __DIR__.'/../src/Controller/PanierController.php';
+   add();
+}
+elseif ($page=="/vider_panier"){ 
+    include __DIR__.'/../src/Controller/PanierController.php';
+   vider_panier();
+}
+elseif ($page=="/panier"){ 
+    include __DIR__.'/../src/Controller/PanierController.php';
+   voir_panier();
+}
+elseif ($page=="/commandez"){ 
+    include __DIR__.'/../src/Controller/PanierController.php';
+   commander_panier();
 }
 
 else {

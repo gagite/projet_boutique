@@ -27,19 +27,26 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/catalogue">Liste des produits</a>
                 </li>
-                <?php if ($connexion == true){?>
+                <?php if ($admin == true){?>
                 <li class="nav-item">
                     <a class="nav-link" href="/user">Liste des utilisateurs</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/ajouter_produit">ajouter produit</a>
-                </li> 
+                </li>
+                <?php } ?> 
                 <li class="nav-item">
-                    <a class="nav-link" href="/nouveau_user">ajouter user</a>
+                    <a class="nav-link" href="/nouveau_user">Inscription</a>
                 </li> 
-                <?php } ?>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="/connexion">Connexion</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="/panier">voir panier</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="/vider_panier">vider panier</a>
                 </li> 
                 <?php if ($connexion == true){?>
                 <li class="nav-item">

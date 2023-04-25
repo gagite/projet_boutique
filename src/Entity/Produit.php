@@ -10,6 +10,15 @@ include_once __DIR__.'/functuion.php';
         return $resultat;
     }
 
+    function getOneProduit_Entity($id){
+        /* 1. Connexion à une base MySQL avec l'invocation de pilote */
+        $dbh=connect_bd();
+        //2. RECUPERER LES DONNEES 
+        $resultat = $dbh->query("select * from produit where id=$id")->fetch();
+    // print_r($resultat);
+        return $resultat;
+    }
+
 
     function supprimer_produit(){
         $dbh=connect_bd();
