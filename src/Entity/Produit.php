@@ -1,5 +1,5 @@
 <?php 
-include_once __DIR__.'/functuion.php';
+include_once __DIR__.'/function.php';
     
     function getProduit_Entity(){
         /* 1. Connexion à une base MySQL avec l'invocation de pilote */

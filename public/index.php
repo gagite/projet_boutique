@@ -28,7 +28,7 @@ if(isset($_SESSION['user'])) {
     }
 }  
 
-echo $connexion;
+//echo $connexion;
 //var_dump($user);
 include __DIR__.'/../templates/header.php';
 // si on a rien apres le / de l'url alors
@@ -144,8 +144,12 @@ elseif ($page=="/panier"){
    voir_panier();
 }
 elseif ($page=="/commandez"){ 
-    include __DIR__.'/../src/Controller/PanierController.php';
+    include __DIR__.'/../src/Controller/CommandeController.php';
    commander_panier();
+}
+elseif ($page=="/mes_commandes"){ 
+    include __DIR__.'/../src/Controller/CommandeController.php';
+   mes_commande();
 }
 
 else {

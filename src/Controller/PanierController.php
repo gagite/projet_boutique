@@ -42,10 +42,13 @@ CAS ou remet le même produit => quantité devrait augmenter
 2 est que le panier contient le produit que je veux inserer
  => si il contient pas je l'insere avec une quantité à 1
  => si il contien je l'inserer avec une quantité = quantité existant + 1
-*/}
+*/
+header('Location: index.php/panier');
+}
 
 function vider_panier(){
 unset($_SESSION['panier']);
+header('Location: index.php');
 }
 
 function getTotalPanier(){
@@ -96,9 +99,3 @@ function voir_panier(){
     include __DIR__.'/../../templates/voir_panier.php'; 
 }
 
-function commander_panier(){
-echo 'test';
-$panier=$_SESSION['panier'];
-$panier= vider_panier();
-
-}

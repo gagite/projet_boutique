@@ -45,10 +45,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/panier">voir panier</a>
                 </li> 
-                <li class="nav-item">
-                    <a class="nav-link" href="/vider_panier">vider panier</a>
-                </li> 
+                
                 <?php if ($connexion == true){?>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/mes_commandes">Mes commandes</a>
+                </li> 
                 <li class="nav-item">
                     <a class="nav-link" href="/deconnexion">Deconnexion</a>
                 </li> 
